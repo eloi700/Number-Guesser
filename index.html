@@ -27,6 +27,13 @@
         -webkit-appearance: none;
         margin: 0;
       }
+
+      button {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-transform: uppercase;
+      }
     </style>
   </head>
   <body class="d-flex justify-content-center align-items-center">
@@ -36,16 +43,25 @@
       >
         <div class="container">
           <h1 class="heading text-center text-white mb-0">Number Guesser</h1>
-          <p class="text-center mb-5 text-secondary">
-            Guess a number from 1 to 10
-          </p>
-          <div class="input-group mb-5">
+          <div id="game">
+            <p class="text-center mb-3 text-secondary">
+              Guess a number from <span class="min-num"> </span> to
+              <span class="max-num"> </span>
+            </p>
             <input
               type="number"
               class="form-control py-1"
+              id="guess-input"
               placeholder="Enter a number"
             />
-            <button class="btn btn-secondary" type="button">Submit</button>
+            <button
+              class="btn btn-secondary mt-4 submit-btn"
+              id="guess-btn"
+              type="number"
+            >
+              Submit
+            </button>
+            <p class="message mt-5 pt-4 text-center"></p>
           </div>
         </div>
       </div>
